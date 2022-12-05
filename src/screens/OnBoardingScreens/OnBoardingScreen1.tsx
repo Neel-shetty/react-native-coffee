@@ -1,12 +1,24 @@
-import { Dimensions, StyleSheet, Text, View } from "react-native";
+import {
+  Dimensions,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from "react-native";
 import React from "react";
 import CoffeeMachine from "../../components/svg/OnBoaringSvg/CoffeeMachine";
+import NextArrow from "../../components/NextArrow";
+import { Props } from "../../../types";
+import { StatusBar } from "expo-status-bar";
 
-const OnBoardingScreen1 = () => {
+const OnBoardingScreen1 = ({ navigation }: Props) => {
+  function NextButton() {
+    navigation.navigate("SignInScreen");
+  }
   return (
     <View style={styles.root}>
+      <StatusBar style="dark"/>
       <View style={styles.svgContainer}>
-        
         <CoffeeMachine />
       </View>
       <View style={styles.titleContainer}>
@@ -14,6 +26,11 @@ const OnBoardingScreen1 = () => {
         <Text style={styles.subtitle}>
           The best grain, the finest roast, the most powerful flavour
         </Text>
+        <View style={styles.buttonContainer}>
+          <TouchableOpacity onPress={NextButton}>
+            <NextArrow />
+          </TouchableOpacity>
+        </View>
       </View>
     </View>
   );
@@ -28,6 +45,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     flex: 1,
+    backgroundColor: "white",
   },
   svgContainer: {
     flex: 1,
@@ -54,5 +72,12 @@ const styles = StyleSheet.create({
     fontFamily: "poppins-regular",
     textAlign: "center",
     color: "#AAAAAA",
+  },
+  buttonContainer: {
+    alignItems: "flex-end",
+    justifyContent: "flex-end",
+    // backgroundColor: "pink",
+    flex: 1,
+    marginBottom: 40,
   },
 });
