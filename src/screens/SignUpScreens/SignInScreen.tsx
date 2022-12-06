@@ -18,6 +18,8 @@ import { Props } from "../../../types";
 
 const SignInScreen = ({ navigate }: Props) => {
   function NextButton() {}
+  function ForgotButton() {}
+  function SignUpButton() {}
   return (
     // <KeyboardAvoidingView
     //   style={{ flex: 1, flexDirection: "column", justifyContent: "center" }}
@@ -48,7 +50,9 @@ const SignInScreen = ({ navigate }: Props) => {
             <CustomTextInput placeholder={"Password"} icon={"password"} />
           </View>
           <View style={styles.linkContainer}>
-            <Text style={styles.link}>Forgot Password?</Text>
+            <TouchableOpacity onPress={ForgotButton}>
+              <Text style={styles.link}>Forgot Password?</Text>
+            </TouchableOpacity>
           </View>
           <View style={styles.arrowContainer}>
             <TouchableOpacity onPress={NextButton}>
@@ -57,7 +61,9 @@ const SignInScreen = ({ navigate }: Props) => {
           </View>
           <View style={styles.subtitleContainer}>
             <Text style={styles.subtitle2}>New member? </Text>
-            <Text style={styles.link}>Sign up</Text>
+            <TouchableOpacity onPress={SignUpButton}>
+              <Text style={styles.link}>Sign up</Text>
+            </TouchableOpacity>
           </View>
         </ScrollView>
       </SafeAreaView>
