@@ -14,8 +14,10 @@ interface inputTypes {
 const CustomTextInput = ({ placeholder, icon }: inputTypes) => {
   return (
     <View style={styles.root}>
-      {icon === "mail" ? <Message /> : null}
-      {icon === "password" ? <Lock /> : null}
+      <View style={styles.iconContainer}>
+        {icon === "mail" ? <Message /> : null}
+        {icon === "password" ? <Lock /> : null}
+      </View>
       <View style={styles.inputContainer}>
         <View style={styles.divider} />
         <TextInput
@@ -61,5 +63,8 @@ const styles = StyleSheet.create({
     height: 25,
     width: 5,
     borderColor: "#C1C7D0",
+  },
+  iconContainer: {
+    paddingHorizontal: 5,
   },
 });

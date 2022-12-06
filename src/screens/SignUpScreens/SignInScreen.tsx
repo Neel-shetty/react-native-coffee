@@ -6,6 +6,7 @@ import {
   SafeAreaView,
   KeyboardAvoidingView,
   Platform,
+  TouchableOpacity,
 } from "react-native";
 import React from "react";
 import BackArrow from "../../components/BackArrow";
@@ -13,21 +14,23 @@ import CustomTextInput from "../../components/CustomTextInput";
 import Colors from "../../constants/Colors";
 import NextArrow from "../../components/NextArrow";
 import { paddingH, width } from "../../constants/Layout";
+import { Props } from "../../../types";
 
-const SignInScreen = () => {
+const SignInScreen = ({ navigate }: Props) => {
+  function NextButton() {}
   return (
+    // <KeyboardAvoidingView
+    //   style={{ flex: 1, flexDirection: "column", justifyContent: "center" }}
+    //   behavior="padding"
+    //   enabled
+    //   keyboardVerticalOffset={100}
+    // >
     <KeyboardAvoidingView
-      style={{ flex: 1, flexDirection: "column", justifyContent: "center" }}
-      behavior="padding"
-      enabled
-      keyboardVerticalOffset={100}
+      style={{ flex: 1 }}
+      behavior={Platform.OS === "ios" ? "position" : null}
+      // behavior={'height'}
+      keyboardVerticalOffset={Platform.OS === "ios" ? 50 : 70}
     >
-      {/* <KeyboardAvoidingView
-     style={{flex:1}}
-     behavior={Platform.OS === 'ios' ? 'position' : null}
-    // behavior={'height'}
-     keyboardVerticalOffset={Platform.OS === 'ios' ? 50 : 70}
-   > */}
       <SafeAreaView style={styles.root}>
         <ScrollView
           contentContainerStyle={styles.root}
@@ -48,7 +51,9 @@ const SignInScreen = () => {
             <Text style={styles.link}>Forgot Password?</Text>
           </View>
           <View style={styles.arrowContainer}>
-            <NextArrow />
+            <TouchableOpacity onPress={NextButton}>
+              <NextArrow />
+            </TouchableOpacity>
           </View>
           <View style={styles.subtitleContainer}>
             <Text style={styles.subtitle2}>New member? </Text>
@@ -94,6 +99,7 @@ const styles = StyleSheet.create({
     fontSize: 14,
     color: Colors.primary100,
     textDecorationLine: "underline",
+    paddingVertical: 10,
   },
   header: {
     flex: 1.5,
@@ -101,6 +107,7 @@ const styles = StyleSheet.create({
     width: width * paddingH,
     // backgroundColor: "red",
     alignSelf: "center",
+    paddingVertical: 10,
   },
   top: {
     flex: 2,
