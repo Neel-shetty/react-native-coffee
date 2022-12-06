@@ -29,6 +29,8 @@ import LinkingConfiguration from "./LinkingConfiguration";
 import OnBoardingScreen1 from "../screens/OnBoardingScreens/OnBoardingScreen1";
 import SignInScreen from "../screens/SignUpScreens/SignInScreen";
 import SignUpScreen from "../screens/SignUpScreens/SignUpScreen";
+import ForgotPasswordScreen from "../screens/SignUpScreens/ForgotPasswordScreen";
+import VerificationScreen from "../screens/SignUpScreens/VerificationScreen";
 
 export default function Navigation({
   colorScheme,
@@ -75,6 +77,11 @@ function RootNavigator() {
         options={{ headerShown: false }}
       />
       <Stack.Screen name="SignUpScreen" component={SignUpScreen} />
+      <Stack.Screen
+        name="ForgotPasswordScreen"
+        component={ForgotPasswordScreen}
+      />
+      <Stack.Screen name="VerificationScreen" component={VerificationScreen} />
       <Stack.Group screenOptions={{ presentation: "modal" }}>
         <Stack.Screen name="Modal" component={ModalScreen} />
       </Stack.Group>
