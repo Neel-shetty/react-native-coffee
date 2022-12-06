@@ -32,7 +32,7 @@ import SignInScreen from "../screens/SignUpScreens/SignInScreen";
 export default function Navigation({
   colorScheme,
 }: {
-  colorScheme: ColorSchemeName;
+  colorScheme?: ColorSchemeName | undefined;
 }) {
   return (
     <NavigationContainer

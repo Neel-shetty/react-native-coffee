@@ -1,7 +1,10 @@
 import { StyleSheet, Text, TextInput, View } from "react-native";
 import React from "react";
-import { width } from "../constants/Layout";
+import { paddingH, width } from "../constants/Layout";
 import { Ionicons } from "@expo/vector-icons";
+import Profile from "../components/svg/OnBoaringSvg/Profile";
+import Lock from "../components/svg/OnBoaringSvg/Lock";
+import Message from "../components/svg/OnBoaringSvg/Message";
 
 interface inputTypes {
   placeholder: string;
@@ -11,22 +14,8 @@ interface inputTypes {
 const CustomTextInput = ({ placeholder, icon }: inputTypes) => {
   return (
     <View style={styles.root}>
-      {icon === "mail" ? (
-        <Ionicons
-          name="mail-outline"
-          size={24}
-          style={styles.icon}
-          color="#001833"
-        />
-      ) : null}
-      {icon === "password" ? (
-        <Ionicons
-          name="lock-closed-outline"
-          style={styles.icon}
-          color="#001833"
-          size={24}
-        />
-      ) : null}
+      {icon === "mail" ? <Message /> : null}
+      {icon === "password" ? <Lock /> : null}
       <View style={styles.inputContainer}>
         <View style={styles.divider} />
         <TextInput
@@ -45,7 +34,7 @@ const styles = StyleSheet.create({
   root: {
     borderBottomWidth: 1,
     borderColor: "#C1C7D0",
-    width: width * 0.9,
+    width: width * paddingH,
     alignSelf: "center",
     height: 29,
     // backgroundColor: "pink",
@@ -54,7 +43,7 @@ const styles = StyleSheet.create({
   },
   input: {
     // backgroundColor: "violet",
-    width: width * 0.8,
+    width: width * 0.7,
     fontFamily: "poppins-regular",
   },
   inputContainer: {
