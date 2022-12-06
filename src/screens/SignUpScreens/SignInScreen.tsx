@@ -14,9 +14,9 @@ import CustomTextInput from "../../components/CustomTextInput";
 import Colors from "../../constants/Colors";
 import NextArrow from "../../components/NextArrow";
 import { paddingH, width } from "../../constants/Layout";
-import { Props } from "../../../types";
+import { SignInScreenProps } from "../../../types";
 
-const SignInScreen = ({ navigate }: Props) => {
+const SignInScreen = ({ navigation }: SignInScreenProps) => {
   function NextButton() {}
   function ForgotButton() {}
   function SignUpButton() {}
@@ -29,7 +29,7 @@ const SignInScreen = ({ navigate }: Props) => {
     // >
     <KeyboardAvoidingView
       style={{ flex: 1 }}
-      behavior={Platform.OS === "ios" ? "position" : null}
+      behavior={undefined}
       // behavior={'height'}
       keyboardVerticalOffset={Platform.OS === "ios" ? 50 : 70}
     >

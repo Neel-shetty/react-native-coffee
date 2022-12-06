@@ -43,3 +43,8 @@ export type Props = NativeStackScreenProps<
   RootStackParamList,
   "OnBoardingScreen1"
 >;
+
+export type SignInScreenProps = NativeStackScreenProps<
+  RootStackParamList,
+  "SignInScreen"
+>;
