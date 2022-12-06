@@ -42,6 +42,7 @@ const styles = StyleSheet.create({
     // backgroundColor: "pink",
     margin: 10,
     flexDirection: "row",
+    marginVertical: 12,
   },
   input: {
     // backgroundColor: "violet",
