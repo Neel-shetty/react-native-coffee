@@ -20,6 +20,7 @@ const SignInScreen = ({ navigation }: SignInScreenProps) => {
   function NextButton() {}
   function ForgotButton() {}
   function SignUpButton() {}
+  function BackButton() {}
   return (
     // <KeyboardAvoidingView
     //   style={{ flex: 1, flexDirection: "column", justifyContent: "center" }}
@@ -39,7 +40,9 @@ const SignInScreen = ({ navigation }: SignInScreenProps) => {
           showsVerticalScrollIndicator={false}
         >
           <View style={styles.header}>
-            <BackArrow />
+            <TouchableOpacity onPress={BackButton}>
+              <BackArrow />
+            </TouchableOpacity>
           </View>
           <View style={styles.top}>
             <Text style={styles.title}>Sign in</Text>

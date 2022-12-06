@@ -28,6 +28,7 @@ import {
 import LinkingConfiguration from "./LinkingConfiguration";
 import OnBoardingScreen1 from "../screens/OnBoardingScreens/OnBoardingScreen1";
 import SignInScreen from "../screens/SignUpScreens/SignInScreen";
+import SignUpScreen from "../screens/SignUpScreens/SignUpScreen";
 
 export default function Navigation({
   colorScheme,
@@ -73,6 +74,7 @@ function RootNavigator() {
         component={SignInScreen}
         options={{ headerShown: false }}
       />
+      <Stack.Screen name="SignUpScreen" component={SignUpScreen} />
       <Stack.Group screenOptions={{ presentation: "modal" }}>
         <Stack.Screen name="Modal" component={ModalScreen} />
       </Stack.Group>
