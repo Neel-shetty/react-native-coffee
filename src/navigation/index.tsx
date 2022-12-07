@@ -76,9 +76,12 @@ function RootNavigator() {
         component={SignInScreen}
         options={{ headerShown: false }}
       />
-      <Stack.Screen name="SignUpScreen" component={SignUpScreen} />
+      <Stack.Screen name="SignUpScreen" component={SignUpScreen} 
+        options={{ headerShown: false }}
+      />
       <Stack.Screen
         name="ForgotPasswordScreen"
+        options={{ headerShown: false }}
         component={ForgotPasswordScreen}
       />
       <Stack.Screen name="VerificationScreen" component={VerificationScreen} />
