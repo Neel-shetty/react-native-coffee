@@ -115,7 +115,12 @@ function BottomTabNavigator() {
         tabBarActiveTintColor: Colors[colorScheme].tint,
       }}
     >
-      <BottomTab.Screen name="HomeScreen" component={HomeScreen} />
+      <BottomTab.Screen
+        name="HomeScreen"
+        component={HomeScreen}
+        options={{ headerShown: false }}
+      />
+      
       <BottomTab.Screen
         name="TabOne"
         component={TabOneScreen}
