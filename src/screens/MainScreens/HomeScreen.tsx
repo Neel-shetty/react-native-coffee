@@ -1,33 +1,30 @@
-import { Text, View } from "react-native";
+import { Text, View, StyleSheet } from "react-native";
 
 const HomeScreen = () => {
   return (
-    <View>
-      <View>
+    <View style={styles.root}>
+      <View style={styles.headerContainer}>
         <Text>top bar</Text>
-        <View>
-          <View>
+        <View style={styles.headerTextContainer}>
+          <View style={styles.gmContainer}>
             <Text>Good morning</Text>
           </View>
-          <View>
+          <View style={styles.nameContainer}>
             <Text>Anderson</Text>
           </View>
         </View>
 
-        <View>
+        <View style={styles.iconContainer}>
           <Text>profile</Text>
-        </View>
-
-        <View>
-          <Text>cart</Text>
+          <Text>Cart</Text>
         </View>
       </View>
 
-      <View>
+      <View style={styles.cardContainer}>
         <Text>Loyalty card</Text>
       </View>
 
-      <View>
+      <View style={styles.menuContainer}>
         <View>
           <Text>heading</Text>
         </View>
@@ -43,3 +40,16 @@ const HomeScreen = () => {
 };
 
 export default HomeScreen;
+
+const styles = StyleSheet.create({
+  root: {
+    flex: 1,
+  },
+  headerContainer: {},
+  headerTextContainer: {},
+  gmContainer: {},
+  nameContainer: {},
+  iconContainer: {},
+  cardContainer: {},
+  menuContainer: {},
+});
