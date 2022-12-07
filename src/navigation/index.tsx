@@ -56,7 +56,7 @@ const Stack = createNativeStackNavigator<RootStackParamList>();
 
 function RootNavigator() {
   return (
-    <Stack.Navigator initialRouteName="OnBoardingScreen1">
+    <Stack.Navigator initialRouteName="Root">
       <Stack.Screen
         name="Root"
         component={BottomTabNavigator}
@@ -88,7 +88,6 @@ function RootNavigator() {
       <Stack.Screen name="VerificationScreen" component={VerificationScreen}
         options={{ headerShown: false }}
       />
-      <Stack.Screen name="HomeScreen" component={HomeScreen}/>
       <Stack.Group screenOptions={{ presentation: "modal" }}>
         <Stack.Screen name="Modal" component={ModalScreen} />
       </Stack.Group>
@@ -107,11 +106,12 @@ function BottomTabNavigator() {
 
   return (
     <BottomTab.Navigator
-      initialRouteName="TabOne"
+      initialRouteName="HomeScreen"
       screenOptions={{
         tabBarActiveTintColor: Colors[colorScheme].tint,
       }}
     >
+      <BottomTab.Screen name="HomeScreen" component={HomeScreen}/>
       <BottomTab.Screen
         name="TabOne"
         component={TabOneScreen}
