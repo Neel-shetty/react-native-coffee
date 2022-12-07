@@ -13,7 +13,7 @@ import { StatusBar } from "expo-status-bar";
 
 const OnBoardingScreen1 = ({ navigation }: Props) => {
   function NextButton() {
-    navigation.navigate("ForgotPasswordScreen");
+    navigation.navigate("SignUpScreen");
   }
   return (
     <View style={styles.root}>

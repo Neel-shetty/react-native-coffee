@@ -31,6 +31,7 @@ import SignInScreen from "../screens/SignUpScreens/SignInScreen";
 import SignUpScreen from "../screens/SignUpScreens/SignUpScreen";
 import ForgotPasswordScreen from "../screens/SignUpScreens/ForgotPasswordScreen";
 import VerificationScreen from "../screens/SignUpScreens/VerificationScreen";
+import HomeScreen from "../screens/MainScreens/HomeScreen"
 
 export default function Navigation({
   colorScheme,
@@ -84,7 +85,10 @@ function RootNavigator() {
         options={{ headerShown: false }}
         component={ForgotPasswordScreen}
       />
-      <Stack.Screen name="VerificationScreen" component={VerificationScreen} />
+      <Stack.Screen name="VerificationScreen" component={VerificationScreen}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen name="HomeScreen" component={HomeScreen}/>
       <Stack.Group screenOptions={{ presentation: "modal" }}>
         <Stack.Screen name="Modal" component={ModalScreen} />
       </Stack.Group>

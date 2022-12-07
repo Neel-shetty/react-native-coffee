@@ -16,11 +16,15 @@ import NextArrow from "../../components/NextArrow";
 import { paddingH, width } from "../../constants/Layout";
 import { SignInScreenProps } from "../../../types";
 
-const SignUpScreen = ({ navigation }: SignInScreenProps) => {
+const SignUpScreen = ({ navigation, route }: SignInScreenProps) => {
   function NextButton() {}
   function ForgotButton() {}
-  function SignInButton() {}
-  function BackButton() {}
+  function SignInButton() {
+  navigation.navigate("SignInScreen")
+  }
+  function BackButton() {
+  navigation.goBack()
+  }
   return (
     // <KeyboardAvoidingView
     //   style={{ flex: 1, flexDirection: "column", justifyContent: "center" }}

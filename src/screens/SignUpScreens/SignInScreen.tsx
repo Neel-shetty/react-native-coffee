@@ -17,10 +17,16 @@ import { paddingH, width } from "../../constants/Layout";
 import { SignInScreenProps } from "../../../types";
 
 const SignInScreen = ({ navigation }: SignInScreenProps) => {
-  function NextButton() {}
+  function NextButton() {
+  navigation.navigate("HomeScreen")
+  }
   function ForgotButton() {}
-  function SignUpButton() {}
-  function BackButton() {}
+  function SignUpButton() {
+navigation.navigate("SignUpScreen")
+  }
+  function BackButton() {
+  navigation.goBack()
+  }
   return (
     // <KeyboardAvoidingView
     //   style={{ flex: 1, flexDirection: "column", justifyContent: "center" }}
