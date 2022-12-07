@@ -14,16 +14,16 @@ import CustomTextInput from "../../components/CustomTextInput";
 import Colors from "../../constants/Colors";
 import NextArrow from "../../components/NextArrow";
 import { paddingH, width } from "../../constants/Layout";
-import { SignInScreenProps } from "../../../types";
+import { SignInScreenProps, SignUpScreenProps } from "../../../types";
 
-const SignUpScreen = ({ navigation, route }: SignInScreenProps) => {
+const SignUpScreen = ({ navigation, route }: SignUpScreenProps) => {
   function NextButton() {}
   function ForgotButton() {}
   function SignInButton() {
-  navigation.navigate("SignInScreen")
+    navigation.navigate("SignInScreen");
   }
   function BackButton() {
-  navigation.goBack()
+    navigation.goBack();
   }
   return (
     // <KeyboardAvoidingView
@@ -60,7 +60,9 @@ const SignUpScreen = ({ navigation, route }: SignInScreenProps) => {
           </View>
           <View style={styles.linkContainer}>
             <TouchableOpacity onPress={ForgotButton}>
-              <Text style={styles.link}>By signing up you agree to our terms of use</Text>
+              <Text style={styles.link}>
+                By signing up you agree to our terms of use
+              </Text>
             </TouchableOpacity>
           </View>
           <View style={styles.arrowContainer}>

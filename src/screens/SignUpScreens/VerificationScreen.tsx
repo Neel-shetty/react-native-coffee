@@ -14,18 +14,18 @@ import CustomTextInput from "../../components/CustomTextInput";
 import Colors from "../../constants/Colors";
 import NextArrow from "../../components/NextArrow";
 import { paddingH, width } from "../../constants/Layout";
-import { SignInScreenProps } from "../../../types";
+import { SignInScreenProps, VerificationScreenProps } from "../../../types";
 
-const SignInScreen = ({ navigation }: SignInScreenProps) => {
+const SignInScreen = ({ navigation }: VerificationScreenProps) => {
   function NextButton() {
-  navigation.navigate("HomeScreen")
+    navigation.navigate("Root");
   }
   function ForgotButton() {}
   function SignUpButton() {
-navigation.navigate("SignUpScreen")
+    navigation.navigate("SignUpScreen");
   }
   function BackButton() {
-  navigation.goBack()
+    navigation.goBack();
   }
   return (
     // <KeyboardAvoidingView
@@ -54,8 +54,7 @@ navigation.navigate("SignUpScreen")
             <Text style={styles.title}>Verification</Text>
             <Text style={styles.subtitle}>Enter the OTP we sent you</Text>
           </View>
-          <View style={styles.inputContainer}>
-          </View>
+          <View style={styles.inputContainer}></View>
           <View style={styles.linkContainer}>
             <TouchableOpacity onPress={ForgotButton}>
               <Text style={styles.subtitle}>Resend in 00.30</Text>
@@ -66,8 +65,7 @@ navigation.navigate("SignUpScreen")
               <NextArrow />
             </TouchableOpacity>
           </View>
-          <View style={styles.subtitleContainer}>
-          </View>
+          <View style={styles.subtitleContainer}></View>
         </ScrollView>
       </SafeAreaView>
     </KeyboardAvoidingView>

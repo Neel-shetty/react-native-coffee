@@ -31,7 +31,7 @@ import SignInScreen from "../screens/SignUpScreens/SignInScreen";
 import SignUpScreen from "../screens/SignUpScreens/SignUpScreen";
 import ForgotPasswordScreen from "../screens/SignUpScreens/ForgotPasswordScreen";
 import VerificationScreen from "../screens/SignUpScreens/VerificationScreen";
-import HomeScreen from "../screens/MainScreens/HomeScreen"
+import HomeScreen from "../screens/MainScreens/HomeScreen";
 
 export default function Navigation({
   colorScheme,
@@ -77,7 +77,9 @@ function RootNavigator() {
         component={SignInScreen}
         options={{ headerShown: false }}
       />
-      <Stack.Screen name="SignUpScreen" component={SignUpScreen} 
+      <Stack.Screen
+        name="SignUpScreen"
+        component={SignUpScreen}
         options={{ headerShown: false }}
       />
       <Stack.Screen
@@ -85,7 +87,9 @@ function RootNavigator() {
         options={{ headerShown: false }}
         component={ForgotPasswordScreen}
       />
-      <Stack.Screen name="VerificationScreen" component={VerificationScreen}
+      <Stack.Screen
+        name="VerificationScreen"
+        component={VerificationScreen}
         options={{ headerShown: false }}
       />
       <Stack.Group screenOptions={{ presentation: "modal" }}>
@@ -111,7 +115,7 @@ function BottomTabNavigator() {
         tabBarActiveTintColor: Colors[colorScheme].tint,
       }}
     >
-      <BottomTab.Screen name="HomeScreen" component={HomeScreen}/>
+      <BottomTab.Screen name="HomeScreen" component={HomeScreen} />
       <BottomTab.Screen
         name="TabOne"
         component={TabOneScreen}

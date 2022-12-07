@@ -25,7 +25,6 @@ export type RootStackParamList = {
   SignUpScreen: undefined;
   ForgotPasswordScreen: undefined;
   VerificationScreen: undefined;
-  HomeScreen:undefined;
 };
 
 export type RootStackScreenProps<Screen extends keyof RootStackParamList> =
@@ -35,6 +34,7 @@ export type RootTabParamList = {
   TabOne: undefined;
   TabTwo: undefined;
   OnBoardingScreen1: undefined;
+  HomeScreen: undefined;
 };
 
 export type RootTabScreenProps<Screen extends keyof RootTabParamList> =
@@ -51,4 +51,17 @@ export type Props = NativeStackScreenProps<
 export type SignInScreenProps = NativeStackScreenProps<
   RootStackParamList,
   "SignInScreen"
+>;
+
+export type SignUpScreenProps = NativeStackScreenProps<
+  RootStackParamList,
+  "SignUpScreen"
+>;
+export type VerificationScreenProps = NativeStackScreenProps<
+  RootStackParamList,
+  "VerificationScreen"
+>;
+export type ForgotPasswordScreenProps = NativeStackScreenProps<
+  RootStackParamList,
+  "ForgotPasswordScreen"
 >;

@@ -18,7 +18,7 @@ import { SignInScreenProps } from "../../../types";
 
 const SignInScreen = ({ navigation }: SignInScreenProps) => {
   function NextButton() {
-  navigation.navigate("HomeScreen")
+  navigation.navigate("Root")
   }
   function ForgotButton() {}
   function SignUpButton() {
