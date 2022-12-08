@@ -4,13 +4,12 @@ const HomeScreen = () => {
   return (
     <View style={styles.root}>
       <View style={styles.headerContainer}>
-        <Text>top bar</Text>
         <View style={styles.headerTextContainer}>
           <View style={styles.gmContainer}>
-            <Text>Good morning</Text>
+            <Text style={styles.gm}>Good morning</Text>
           </View>
           <View style={styles.nameContainer}>
-            <Text>Anderson</Text>
+            <Text style={styles.name}>Anderson</Text>
           </View>
         </View>
 
@@ -45,11 +44,32 @@ const styles = StyleSheet.create({
   root: {
     flex: 1,
   },
-  headerContainer: {},
+  headerContainer: {
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "space-between",
+    flexDirection: "row",
+  },
   headerTextContainer: {},
   gmContainer: {},
-  nameContainer: {},
-  iconContainer: {},
-  cardContainer: {},
-  menuContainer: {},
+  gm: {
+    fontFamily: "poppins-regular",
+  },
+  nameContainer: {
+    fontFamily: "poppins-regular",
+  },
+  name: {},
+  iconContainer: {
+    flexDirection: "row",
+  },
+  cardContainer: {
+    flex: 2,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  menuContainer: {
+    flex: 3,
+    alignItems: "center",
+    justifyContent: "center",
+  },
 });
