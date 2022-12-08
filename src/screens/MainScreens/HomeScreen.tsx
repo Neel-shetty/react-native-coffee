@@ -56,7 +56,7 @@ const styles = StyleSheet.create({
     fontFamily: "poppins-regular",
   },
   nameContainer: {
-    fontFamily: "poppins-regular",
+  
   },
   name: {},
   iconContainer: {
