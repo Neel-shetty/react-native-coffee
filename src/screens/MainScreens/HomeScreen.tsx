@@ -43,6 +43,7 @@ export default HomeScreen;
 const styles = StyleSheet.create({
   root: {
     flex: 1,
+    backgroundColor:'white'
   },
   headerContainer: {
     flex: 1,
@@ -54,11 +55,17 @@ const styles = StyleSheet.create({
   gmContainer: {},
   gm: {
     fontFamily: "poppins-regular",
+    fontSize:14,
+    color:'#D8D8D8'
   },
   nameContainer: {
   
   },
-  name: {},
+  name: {
+    fontFamily: "poppins-medium",
+    fontSize:18
+
+  },
   iconContainer: {
     flexDirection: "row",
   },
