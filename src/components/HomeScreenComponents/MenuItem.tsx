@@ -1,11 +1,24 @@
 import { Image, StyleSheet, Text, View } from "react-native";
 import React from "react";
 
-const MenuItem = () => {
+// interface item {
+//   id: number;
+//   name: string;
+//   image: any;
+//   cost: string;
+//   data: any
+// }
+
+interface dataProp {
+  data: any;
+}
+
+const MenuItem = ({ data }: dataProp) => {
   return (
     <View style={styles.root}>
-      <Image source={require("../../../assets/images/Home/coffee1.png")} />
-      <Text style={styles.title}>Americano</Text>
+      {/* <Image source={require("../../../assets/images/Home/coffee1.png")} /> */}
+      <Image source={data.image} />
+      <Text style={styles.title}>{data.name}</Text>
     </View>
   );
 };
