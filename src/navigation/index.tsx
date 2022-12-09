@@ -32,6 +32,7 @@ import SignUpScreen from "../screens/SignUpScreens/SignUpScreen";
 import ForgotPasswordScreen from "../screens/SignUpScreens/ForgotPasswordScreen";
 import VerificationScreen from "../screens/SignUpScreens/VerificationScreen";
 import HomeScreen from "../screens/MainScreens/HomeScreen";
+import { width } from "../constants/Layout";
 
 export default function Navigation({
   colorScheme,
@@ -118,7 +119,19 @@ function BottomTabNavigator() {
       <BottomTab.Screen
         name="HomeScreen"
         component={HomeScreen}
-        options={{ headerShown: false, tabBarStyle: { display: "none" } }}
+        options={{
+          headerShown: false,
+          tabBarStyle: {
+            position: "absolute",
+            bottom: 25,
+            width: width * 0.9,
+            borderRadius: 15,
+            height: 64,
+            alignItems: "center",
+            marginLeft: width / 19,
+            backgroundColor: "white",
+          },
+        }}
       />
 
       <BottomTab.Screen
