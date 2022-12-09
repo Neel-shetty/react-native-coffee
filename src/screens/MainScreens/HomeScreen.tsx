@@ -68,7 +68,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   menuContainer: {
-    flex: 3,
+    flex: 6,
     alignItems: "center",
     justifyContent: "center",
     width: width,

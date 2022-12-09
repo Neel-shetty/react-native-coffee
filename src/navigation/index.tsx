@@ -118,9 +118,9 @@ function BottomTabNavigator() {
       <BottomTab.Screen
         name="HomeScreen"
         component={HomeScreen}
-        options={{ headerShown: false }}
+        options={{ headerShown: false, tabBarStyle: { display: "none" } }}
       />
-      
+
       <BottomTab.Screen
         name="TabOne"
         component={TabOneScreen}

@@ -11,9 +11,11 @@ import React from "react";
 
 interface dataProp {
   data: any;
+  id: number;
 }
 
-const MenuItem = ({ data }: dataProp) => {
+const MenuItem = ({ data, id }: dataProp) => {
+  
   return (
     <View style={styles.root}>
       {/* <Image source={require("../../../assets/images/Home/coffee1.png")} /> */}
