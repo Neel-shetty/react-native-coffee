@@ -1,4 +1,7 @@
 import { Text, View, StyleSheet } from "react-native";
+import LoyaltyCard from "../../components/HomeScreenComponents/LoyaltyCard";
+import Menu from "../../components/HomeScreenComponents/Menu";
+import { width } from "../../constants/Layout";
 
 const HomeScreen = () => {
   return (
@@ -21,18 +24,11 @@ const HomeScreen = () => {
 
       <View style={styles.cardContainer}>
         <Text>Loyalty card</Text>
+        <LoyaltyCard />
       </View>
 
       <View style={styles.menuContainer}>
-        <View>
-          <Text>heading</Text>
-        </View>
-        <View>
-          <Text>tiles</Text>
-        </View>
-        <View>
-          <Text>tabbar</Text>
-        </View>
+        <Menu />
       </View>
     </View>
   );
@@ -43,7 +39,7 @@ export default HomeScreen;
 const styles = StyleSheet.create({
   root: {
     flex: 1,
-    backgroundColor:'white'
+    backgroundColor: "white",
   },
   headerContainer: {
     flex: 1,
@@ -55,16 +51,13 @@ const styles = StyleSheet.create({
   gmContainer: {},
   gm: {
     fontFamily: "poppins-regular",
-    fontSize:14,
-    color:'#D8D8D8'
+    fontSize: 14,
+    color: "#D8D8D8",
   },
-  nameContainer: {
-  
-  },
+  nameContainer: {},
   name: {
     fontFamily: "poppins-medium",
-    fontSize:18
-
+    fontSize: 18,
   },
   iconContainer: {
     flexDirection: "row",
@@ -78,5 +71,6 @@ const styles = StyleSheet.create({
     flex: 3,
     alignItems: "center",
     justifyContent: "center",
+    width: width,
   },
 });
