@@ -23,7 +23,6 @@ const HomeScreen = () => {
       </View>
 
       <View style={styles.cardContainer}>
-        <Text>Loyalty card</Text>
         <LoyaltyCard />
       </View>
 

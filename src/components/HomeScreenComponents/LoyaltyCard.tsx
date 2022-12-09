@@ -2,6 +2,8 @@ import { StyleSheet, Text, View } from "react-native";
 import React from "react";
 import { width } from "../../constants/Layout";
 import { Ionicons } from "@expo/vector-icons";
+import CoffeeCup from "../../components/svg/HomeScreenSvg/CoffeeCup";
+import CoffeeCupBW from "../../components/svg/HomeScreenSvg/CoffeeCupBW";
 
 const LoyaltyCard = () => {
   return (
@@ -15,7 +17,14 @@ const LoyaltyCard = () => {
         </View>
       </View>
       <View style={styles.cardContainer}>
-        <Ionicons name="home" size={32} />
+        <CoffeeCup />
+        <CoffeeCup />
+        <CoffeeCup />
+        <CoffeeCup />
+        <CoffeeCupBW />
+        <CoffeeCupBW />
+        <CoffeeCupBW />
+        <CoffeeCupBW />
       </View>
     </View>
   );
@@ -40,7 +49,7 @@ const styles = StyleSheet.create({
   left: {},
   right: {},
   title: {
-    fontFamily: "poppins-semibold",
+    fontFamily: "poppins-medium",
     fontSize: 14,
     color: "#D8D8D8",
     paddingHorizontal: 5,
@@ -52,5 +61,6 @@ const styles = StyleSheet.create({
     borderRadius: 12,
     alignItems: "center",
     justifyContent: "center",
+    flexDirection: "row",
   },
 });

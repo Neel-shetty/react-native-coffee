@@ -11,7 +11,7 @@ const Menu = () => {
       <View style={styles.titleContainer}>
         <Text style={styles.title}>Choose your coffee</Text>
       </View>
-      <View style={{ height: 390 }}>
+      <View style={{ height: 390, width: width * 0.9 }}>
         <FlatList
           data={menu}
           renderItem={({ item }) => (

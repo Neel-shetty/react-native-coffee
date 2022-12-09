@@ -1,11 +1,19 @@
 import { StyleSheet, Text, View } from "react-native";
 import React from "react";
 import { width } from "../../constants/Layout";
+import Gift from "../svg/HomeScreenSvg/Gift";
+import GiftGray from "../svg/HomeScreenSvg/GiftGray";
+import Home from "../svg/HomeScreenSvg/Home";
+import HomeGray from "../svg/HomeScreenSvg/HomeGray";
+import List from "../svg/HomeScreenSvg/List";
+import ListGray from "../svg/HomeScreenSvg/ListGray";
 
-const TabBar = () => {
+const TabBar = ({ navigation }: any) => {
   return (
     <View style={styles.root}>
-      <Text>TabBar</Text>
+      <Home />
+      <Gift />
+      <List />
     </View>
   );
 };
@@ -17,8 +25,9 @@ const styles = StyleSheet.create({
     width: width * 0.9,
     height: 64,
     alignItems: "center",
-    justifyContent: "center",
+    justifyContent: "space-evenly",
     backgroundColor: "white",
     borderRadius: 20,
+    flexDirection: "row",
   },
 });
