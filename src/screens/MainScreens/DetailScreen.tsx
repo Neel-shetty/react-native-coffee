@@ -1,18 +1,20 @@
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View, Image } from "react-native";
 import React from "react";
 import DetailHeader from "../../components/DetailScreenComponents/DetailHeader";
-import { Image } from "react-native-svg";
 import CoffeeOptions from "../../components/DetailScreenComponents/CoffeeOptions";
 import Checkout from "../../components/DetailScreenComponents/Checkout";
+import { RootStackScreenProps } from "../../../types";
 
-const DetailScreen = () => {
+const DetailScreen = ({ route }: RootStackScreenProps<"DetailScreen">) => {
+  const uri = route.params.item.image;
+  console.log(uri);
   return (
-    <View>
+    <View style={styles.root}>
       <View>
         <DetailHeader />
       </View>
       <View>
-        <Image />
+        <Image source={uri} style={{ width: 400, height: 200 }} />
       </View>
       <View>
         <CoffeeOptions />
@@ -26,4 +28,9 @@ const DetailScreen = () => {
 
 export default DetailScreen;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  root: {
+    backgroundColor: "white",
+    flex: 1,
+  },
+});

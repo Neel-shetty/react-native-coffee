@@ -16,9 +16,7 @@ import { useNavigation } from "@react-navigation/native";
 
 const Menu = () => {
   const navigation = useNavigation();
-  function itemButton() {
-    navigation.navigate("DetailScreen");
-  }
+  // console.log(menu[0].image)
   return (
     <View style={styles.root}>
       <View style={styles.titleContainer}>
@@ -27,13 +25,18 @@ const Menu = () => {
       <View style={{ height: 390, width: width * 0.9, marginBottom: 50 }}>
         <FlatList
           data={menu}
-          renderItem={({ item }) => (
-            <Pressable onPress={itemButton}>
-              <View style={{ padding: 10 }}>
-                <MenuItem data={item} id={item.id} />
-              </View>
-            </Pressable>
-          )}
+          renderItem={({ item }) => {
+            function itemButton() {
+              navigation.navigate("DetailScreen", { item: item });
+            }
+            return (
+              <Pressable onPress={itemButton}>
+                <View style={{ padding: 10 }}>
+                  <MenuItem data={item} id={item.id} />
+                </View>
+              </Pressable>
+            );
+          }}
           numColumns={2}
         />
       </View>
