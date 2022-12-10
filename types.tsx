@@ -35,6 +35,8 @@ export type RootTabParamList = {
   TabTwo: undefined;
   OnBoardingScreen1: undefined;
   HomeScreen: undefined;
+  RewardScreen: undefined;
+  OrdersScreen: undefined;
 };
 
 export type RootTabScreenProps<Screen extends keyof RootTabParamList> =

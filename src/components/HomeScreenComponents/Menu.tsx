@@ -11,7 +11,7 @@ const Menu = () => {
       <View style={styles.titleContainer}>
         <Text style={styles.title}>Choose your coffee</Text>
       </View>
-      <View style={{ height: 390, width: width * 0.9 }}>
+      <View style={{ height: 390, width: width * 0.9, marginBottom: 50 }}>
         <FlatList
           data={menu}
           renderItem={({ item }) => (
@@ -22,9 +22,7 @@ const Menu = () => {
           numColumns={2}
         />
       </View>
-      <View>
-        {/* <TabBar /> */}
-      </View>
+      <View>{/* <TabBar /> */}</View>
     </View>
   );
 };

@@ -35,6 +35,12 @@ import HomeScreen from "../screens/MainScreens/HomeScreen";
 import { width } from "../constants/Layout";
 import Home from "../components/svg/HomeScreenSvg/Home";
 import HomeGray from "../components/svg/HomeScreenSvg/HomeGray";
+import Gift from "../components/svg/HomeScreenSvg/Gift";
+import GiftGray from "../components/svg/HomeScreenSvg/GiftGray";
+import List from "../components/svg/HomeScreenSvg/List";
+import ListGray from "../components/svg/HomeScreenSvg/ListGray";
+import OrdersScreen from "../screens/MainScreens/OrdersScreen";
+import RewardScreen from "../screens/MainScreens/RewardScreen";
 
 export default function Navigation({
   colorScheme,
@@ -126,6 +132,7 @@ function BottomTabNavigator() {
           marginLeft: width / 19,
           backgroundColor: "white",
         },
+        tabBarShowLabel: false,
       }}
     >
       <BottomTab.Screen
@@ -133,11 +140,17 @@ function BottomTabNavigator() {
         component={HomeScreen}
         options={({ navigation }: RootTabScreenProps<"HomeScreen">) => ({
           headerShown: false,
-          tabBarIcon: ({focused }) => focused ? <Home /> : <HomeGray/>,
+          tabBarIcon: ({ focused }) => (focused ? <Home /> : <HomeGray />),
         })}
       />
-
       <BottomTab.Screen
+        name="RewardScreen"
+        component={RewardScreen}
+        options={() => ({
+          tabBarIcon: ({ focused }) => (focused ? <Gift /> : <GiftGray />),
+        })}
+      />
+      {/* <BottomTab.Screen
         name="TabOne"
         component={TabOneScreen}
         options={({ navigation }: RootTabScreenProps<"TabOne">) => ({
@@ -159,23 +172,16 @@ function BottomTabNavigator() {
             </Pressable>
           ),
         })}
-      />
+      /> */}
       <BottomTab.Screen
-        name="TabTwo"
-        component={TabTwoScreen}
+        name="OrdersScreen"
+        component={OrdersScreen}
         options={{
           title: "Tab Two",
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+          tabBarIcon: ({ color, focused }) =>
+            focused ? <List /> : <ListGray />,
         }}
       />
-      {/* <BottomTab.Screen
-        name="OnBoardingScreen1"
-        component={OnBoardingScreen1}
-        options={{
-          title: "Onboarding",
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
-        }}
-      /> */}
     </BottomTab.Navigator>
   );
 }

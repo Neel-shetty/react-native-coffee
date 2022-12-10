@@ -44,7 +44,7 @@ const styles = StyleSheet.create({
   headerTextContainer: {},
   gmContainer: {},
   gm: {
-    fontFamily: "poppins-regular",
+    fontFamily: "poppins-medium",
     fontSize: 14,
     color: "#D8D8D8",
   },
