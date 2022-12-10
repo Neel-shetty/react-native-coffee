@@ -8,10 +8,10 @@ import {
 import React from "react";
 import CoffeeMachine from "../../components/svg/OnBoaringSvg/CoffeeMachine";
 import NextArrow from "../../components/NextArrow";
-import { Props } from "../../../types";
+import { RootStackScreenProps } from "../../../types";
 import { StatusBar } from "expo-status-bar";
 
-const OnBoardingScreen1 = ({ navigation }: Props) => {
+const OnBoardingScreen1 = ({ navigation }: RootStackScreenProps<'OnBoardingScreen1'>) => {
   function NextButton() {
     navigation.navigate("SignUpScreen");
   }

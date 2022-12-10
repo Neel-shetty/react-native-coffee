@@ -23,7 +23,7 @@ const Menu = () => {
         />
       </View>
       <View>
-        <TabBar />
+        {/* <TabBar /> */}
       </View>
     </View>
   );

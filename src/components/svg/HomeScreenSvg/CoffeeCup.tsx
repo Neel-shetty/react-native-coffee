@@ -32,6 +32,6 @@ export default SvgComponent;
 
 const styles = StyleSheet.create({
   root: {
-    paddingHorizontal: 4,
+    paddingHorizontal: 3,
   },
 });

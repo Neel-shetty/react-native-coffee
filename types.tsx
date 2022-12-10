@@ -42,26 +42,3 @@ export type RootTabScreenProps<Screen extends keyof RootTabParamList> =
     BottomTabScreenProps<RootTabParamList, Screen>,
     NativeStackScreenProps<RootStackParamList>
   >;
-
-export type Props = NativeStackScreenProps<
-  RootStackParamList,
-  "OnBoardingScreen1"
->;
-
-export type SignInScreenProps = NativeStackScreenProps<
-  RootStackParamList,
-  "SignInScreen"
->;
-
-export type SignUpScreenProps = NativeStackScreenProps<
-  RootStackParamList,
-  "SignUpScreen"
->;
-export type VerificationScreenProps = NativeStackScreenProps<
-  RootStackParamList,
-  "VerificationScreen"
->;
-export type ForgotPasswordScreenProps = NativeStackScreenProps<
-  RootStackParamList,
-  "ForgotPasswordScreen"
->;

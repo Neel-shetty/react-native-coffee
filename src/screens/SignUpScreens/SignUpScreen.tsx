@@ -14,9 +14,12 @@ import CustomTextInput from "../../components/CustomTextInput";
 import Colors from "../../constants/Colors";
 import NextArrow from "../../components/NextArrow";
 import { paddingH, width } from "../../constants/Layout";
-import { SignInScreenProps, SignUpScreenProps } from "../../../types";
+import { RootStackScreenProps } from "../../../types";
 
-const SignUpScreen = ({ navigation, route }: SignUpScreenProps) => {
+const SignUpScreen = ({
+  navigation,
+  route,
+}: RootStackScreenProps<"SignUpScreen">) => {
   function NextButton() {}
   function ForgotButton() {}
   function SignInButton() {

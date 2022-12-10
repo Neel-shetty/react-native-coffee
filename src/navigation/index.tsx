@@ -33,6 +33,8 @@ import ForgotPasswordScreen from "../screens/SignUpScreens/ForgotPasswordScreen"
 import VerificationScreen from "../screens/SignUpScreens/VerificationScreen";
 import HomeScreen from "../screens/MainScreens/HomeScreen";
 import { width } from "../constants/Layout";
+import Home from "../components/svg/HomeScreenSvg/Home";
+import HomeGray from "../components/svg/HomeScreenSvg/HomeGray";
 
 export default function Navigation({
   colorScheme,
@@ -114,24 +116,25 @@ function BottomTabNavigator() {
       initialRouteName="HomeScreen"
       screenOptions={{
         tabBarActiveTintColor: Colors[colorScheme].tint,
+        tabBarStyle: {
+          position: "absolute",
+          bottom: 25,
+          width: width * 0.9,
+          borderRadius: 15,
+          height: 64,
+          alignItems: "center",
+          marginLeft: width / 19,
+          backgroundColor: "white",
+        },
       }}
     >
       <BottomTab.Screen
         name="HomeScreen"
         component={HomeScreen}
-        options={{
+        options={({ navigation }: RootTabScreenProps<"HomeScreen">) => ({
           headerShown: false,
-          tabBarStyle: {
-            position: "absolute",
-            bottom: 25,
-            width: width * 0.9,
-            borderRadius: 15,
-            height: 64,
-            alignItems: "center",
-            marginLeft: width / 19,
-            backgroundColor: "white",
-          },
-        }}
+          tabBarIcon: ({focused }) => focused ? <Home /> : <HomeGray/>,
+        })}
       />
 
       <BottomTab.Screen

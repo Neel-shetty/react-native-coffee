@@ -14,9 +14,11 @@ import CustomTextInput from "../../components/CustomTextInput";
 import Colors from "../../constants/Colors";
 import NextArrow from "../../components/NextArrow";
 import { paddingH, width } from "../../constants/Layout";
-import { SignInScreenProps, VerificationScreenProps } from "../../../types";
+import { RootStackScreenProps } from "../../../types";
 
-const SignInScreen = ({ navigation }: VerificationScreenProps) => {
+const VerificationScreen = ({
+  navigation,
+}: RootStackScreenProps<"VerificationScreen">) => {
   function NextButton() {
     navigation.navigate("Root");
   }
@@ -72,7 +74,7 @@ const SignInScreen = ({ navigation }: VerificationScreenProps) => {
   );
 };
 
-export default SignInScreen;
+export default VerificationScreen;
 // const paddingH = 0.8
 
 const styles = StyleSheet.create({

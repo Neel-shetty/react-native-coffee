@@ -1,25 +1,16 @@
-import { Text, View, StyleSheet } from "react-native";
+import { Text, View, StyleSheet, Image } from "react-native";
 import LoyaltyCard from "../../components/HomeScreenComponents/LoyaltyCard";
 import Menu from "../../components/HomeScreenComponents/Menu";
 import { width } from "../../constants/Layout";
+import Cart from "../../components/svg/HomeScreenSvg/Cart";
+import { Octicons } from "@expo/vector-icons";
+import Header from "../../components/HomeScreenComponents/Header";
 
 const HomeScreen = () => {
   return (
     <View style={styles.root}>
       <View style={styles.headerContainer}>
-        <View style={styles.headerTextContainer}>
-          <View style={styles.gmContainer}>
-            <Text style={styles.gm}>Good morning</Text>
-          </View>
-          <View style={styles.nameContainer}>
-            <Text style={styles.name}>Anderson</Text>
-          </View>
-        </View>
-
-        <View style={styles.iconContainer}>
-          <Text>profile</Text>
-          <Text>Cart</Text>
-        </View>
+        <Header />
       </View>
 
       <View style={styles.cardContainer}>
@@ -45,6 +36,9 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "space-between",
     flexDirection: "row",
+    width: width * 0.9,
+    alignSelf: "center",
+    marginTop: 20,
   },
   headerTextContainer: {},
   gmContainer: {},

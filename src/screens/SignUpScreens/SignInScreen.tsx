@@ -14,18 +14,18 @@ import CustomTextInput from "../../components/CustomTextInput";
 import Colors from "../../constants/Colors";
 import NextArrow from "../../components/NextArrow";
 import { paddingH, width } from "../../constants/Layout";
-import { SignInScreenProps } from "../../../types";
+import { RootStackScreenProps } from "../../../types";
 
-const SignInScreen = ({ navigation }: SignInScreenProps) => {
+const SignInScreen = ({ navigation }: RootStackScreenProps<"SignInScreen">) => {
   function NextButton() {
-  navigation.navigate("Root")
+    navigation.navigate("Root");
   }
   function ForgotButton() {}
   function SignUpButton() {
-navigation.navigate("SignUpScreen")
+    navigation.navigate("SignUpScreen");
   }
   function BackButton() {
-  navigation.goBack()
+    navigation.goBack();
   }
   return (
     // <KeyboardAvoidingView
