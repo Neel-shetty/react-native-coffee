@@ -1,11 +1,24 @@
-import { FlatList, ScrollView, StyleSheet, Text, View } from "react-native";
+import {
+  FlatList,
+  ScrollView,
+  StyleSheet,
+  Text,
+  View,
+  Pressable,
+} from "react-native";
 import React from "react";
 import { width } from "../../constants/Layout";
 import MenuItem from "./MenuItem";
 import { menu } from "../../../assets/dummyData/MenuData";
 import TabBar from "./TabBar";
+import { RootTabScreenProps } from "../../../types";
+import { useNavigation } from "@react-navigation/native";
 
 const Menu = () => {
+  const navigation = useNavigation();
+  function itemButton() {
+    navigation.navigate("DetailScreen");
+  }
   return (
     <View style={styles.root}>
       <View style={styles.titleContainer}>
@@ -15,9 +28,11 @@ const Menu = () => {
         <FlatList
           data={menu}
           renderItem={({ item }) => (
-            <View style={{ padding: 10 }}>
-              <MenuItem data={item} id={item.id} />
-            </View>
+            <Pressable onPress={itemButton}>
+              <View style={{ padding: 10 }}>
+                <MenuItem data={item} id={item.id} />
+              </View>
+            </Pressable>
           )}
           numColumns={2}
         />
