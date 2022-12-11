@@ -4,17 +4,19 @@ import DetailHeader from "../../components/DetailScreenComponents/DetailHeader";
 import CoffeeOptions from "../../components/DetailScreenComponents/CoffeeOptions";
 import Checkout from "../../components/DetailScreenComponents/Checkout";
 import { RootStackScreenProps } from "../../../types";
+import { width } from "../../constants/Layout";
 
-const DetailScreen = ({ route }: RootStackScreenProps<"DetailScreen">) => {
+const DetailScreen = ({
+  route,
+}: RootStackScreenProps<"DetailScreen">['route']) => {
   const uri = route.params.item.image;
-  console.log(uri);
   return (
     <View style={styles.root}>
       <View>
         <DetailHeader />
       </View>
-      <View>
-        <Image source={uri} style={{ width: 400, height: 200 }} />
+      <View style={styles.imageContainer}>
+        <Image source={uri} />
       </View>
       <View>
         <CoffeeOptions />
@@ -30,7 +32,16 @@ export default DetailScreen;
 
 const styles = StyleSheet.create({
   root: {
-    backgroundColor: "white",
+    backgroundColor: "#FFFFFF",
     flex: 1,
+  },
+  imageContainer: {
+    height: 150,
+    width: width * 0.9,
+    alignSelf: "center",
+    alignItems: "center",
+    justifyContent: "center",
+    borderRadius: 12,
+    backgroundColor: "#F7F8FB",
   },
 });
