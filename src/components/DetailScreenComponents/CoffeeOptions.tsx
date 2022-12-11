@@ -16,7 +16,7 @@ const CoffeeOptions = () => {
           {/* <Ionicons name="" /> */}
         </View>
       </View>
-      {/* <View style={styles.item}>
+      <View style={styles.item}>
         <Text style={styles.title}>Shot</Text>
       </View>
       <View style={styles.item}>
@@ -27,7 +27,7 @@ const CoffeeOptions = () => {
       </View>
       <View style={styles.item}>
         <Text style={styles.title}>Ice</Text>
-      </View> */}
+      </View>
     </View>
   );
 };
