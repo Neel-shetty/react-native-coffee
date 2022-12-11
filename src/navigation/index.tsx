@@ -102,7 +102,11 @@ function RootNavigator() {
         component={VerificationScreen}
         options={{ headerShown: false }}
       />
-      <Stack.Screen name="DetailScreen" component={DetailScreen} />
+      <Stack.Screen
+        name="DetailScreen"
+        component={DetailScreen}
+        options={{ headerShown: false }}
+      />
       <Stack.Group screenOptions={{ presentation: "modal" }}>
         <Stack.Screen name="Modal" component={ModalScreen} />
       </Stack.Group>

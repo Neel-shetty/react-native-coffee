@@ -5,7 +5,10 @@ import { width } from "../../constants/Layout";
 const Checkout = () => {
   return (
     <View style={styles.root}>
-      <Text>Checkout</Text>
+      <View style={styles.textContainer}>
+        <Text style={styles.amounttxt}>Total Amount</Text>
+        <Text style={styles.amountnum}>$15</Text>
+      </View>
       <View style={styles.buttonContainer}>
         <Text style={styles.title}>Checkout</Text>
       </View>
@@ -33,5 +36,22 @@ const styles = StyleSheet.create({
     fontFamily: "poppins-semibold",
     fontSize: 14,
     color: "white",
+  },
+  textContainer: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    width: width * 0.85,
+    marginBottom: 10,
+  },
+  amounttxt: {
+    fontFamily: "poppins-medium",
+    fontSize: 16,
+    color: "#001833",
+    fontWeight: "500",
+  },
+  amountnum: {
+    fontFamily: "poppins-semibold",
+    fontSize: 16,
+    color: "#001833",
   },
 });
