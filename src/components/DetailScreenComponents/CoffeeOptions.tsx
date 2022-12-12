@@ -2,6 +2,11 @@ import { StyleSheet, Text, View } from "react-native";
 import React from "react";
 import { width } from "../../constants/Layout";
 import { Ionicons } from "@expo/vector-icons";
+import Glass from "../../components/svg/HomeScreenSvg/options/glass";
+import Cup from "../../components/svg/HomeScreenSvg/options/cup";
+import Small from "../../components/svg/HomeScreenSvg/options/glassSmall";
+import Medium from "../../components/svg/HomeScreenSvg/options/glassMedium";
+import Large from "../../components/svg/HomeScreenSvg/options/glassLarge";
 
 const CoffeeOptions = () => {
   return (
@@ -29,9 +34,18 @@ const CoffeeOptions = () => {
       </View>
       <View style={styles.item}>
         <Text style={styles.title}>Select</Text>
+        <View style={styles.twoToggle}>
+          <Cup style={{ marginHorizontal: 25 }} />
+          <Glass />
+        </View>
       </View>
       <View style={styles.item}>
         <Text style={styles.title}>Size</Text>
+        <View style={styles.twoToggle}>
+          <Small style={{ marginHorizontal: 20 }} />
+          <Medium style={{marginRight:20}}/>
+          <Large />
+        </View>
       </View>
       <View style={styles.item}>
         <Text style={styles.title}>Ice</Text>
@@ -71,5 +85,6 @@ const styles = StyleSheet.create({
   },
   twoToggle: {
     flexDirection: "row",
+    alignItems: "flex-end",
   },
 });
