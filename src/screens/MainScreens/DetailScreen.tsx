@@ -22,7 +22,7 @@ const DetailScreen = ({
         <CoffeeOptions />
       </View>
       <View style={styles.checkoutContainer}>
-        <Checkout />
+        <Checkout uri={uri} />
       </View>
     </SafeAreaView>
   );

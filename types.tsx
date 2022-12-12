@@ -26,6 +26,7 @@ export type RootStackParamList = {
   ForgotPasswordScreen: undefined;
   VerificationScreen: undefined;
   DetailScreen: undefined;
+  CartScreen: undefined;
 };
 
 export type RootStackScreenProps<Screen extends keyof RootStackParamList> =

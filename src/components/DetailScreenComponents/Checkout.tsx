@@ -1,17 +1,25 @@
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
 import React from "react";
 import { width } from "../../constants/Layout";
+import { useNavigation } from "@react-navigation/native";
 
-const Checkout = () => {
+const Checkout = ({ uri }: any) => {
+  console.log(uri);
+  const navigation = useNavigation();
+  function cartButton() {
+    navigation.navigate("CartScreen", { uri: uri });
+  }
   return (
     <View style={styles.root}>
       <View style={styles.textContainer}>
         <Text style={styles.amounttxt}>Total Amount</Text>
         <Text style={styles.amountnum}>$15</Text>
       </View>
-      <View style={styles.buttonContainer}>
-        <Text style={styles.title}>Checkout</Text>
-      </View>
+      <TouchableOpacity onPress={cartButton}>
+        <View style={styles.buttonContainer}>
+          <Text style={styles.title}>Checkout</Text>
+        </View>
+      </TouchableOpacity>
     </View>
   );
 };

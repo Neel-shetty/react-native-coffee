@@ -42,6 +42,7 @@ import ListGray from "../components/svg/HomeScreenSvg/ListGray";
 import OrdersScreen from "../screens/MainScreens/OrdersScreen";
 import RewardScreen from "../screens/MainScreens/RewardScreen";
 import DetailScreen from "../screens/MainScreens/DetailScreen";
+import CartScreen from "../screens/MainScreens/CartScreen";
 
 export default function Navigation({
   colorScheme,
@@ -107,6 +108,7 @@ function RootNavigator() {
         component={DetailScreen}
         options={{ headerShown: false }}
       />
+      <Stack.Screen name="CartScreen" component={CartScreen}/>
       <Stack.Group screenOptions={{ presentation: "modal" }}>
         <Stack.Screen name="Modal" component={ModalScreen} />
       </Stack.Group>
