@@ -2,18 +2,19 @@ import { StyleSheet, Text, View, Image } from "react-native";
 import React from "react";
 import { width } from "../../constants/Layout";
 
-const CartCard = () => {
-  
+const CartCard = ({ uri }: any) => {
   return (
     <View style={styles.root}>
       <View style={styles.imageContainer}>
         <Image source={uri} />
       </View>
       <View style={styles.detailContainer}>
-        <Text style={styles.title}>CartCard</Text>
+        <Text style={styles.title}>Americano</Text>
+        <Text style={styles.subtitle}>single | iced | medium | full ice</Text>
+        <Text>x1</Text>
       </View>
       <View style={styles.costContainer}>
-        <Text style={styles.cost}>cost</Text>
+        <Text style={styles.cost}>$3.00</Text>
       </View>
     </View>
   );
@@ -29,14 +30,20 @@ const styles = StyleSheet.create({
     backgroundColor: "#F7F8FB",
     alignSelf: "center",
     flexDirection: "row",
-    alignItems:'center',
-    justifyContent:'center'
+    alignItems: "center",
+    justifyContent: "center",
+    marginBottom: 20,
   },
   imageContainer: {
     flex: 1,
+    alignItems: "center",
+    justifyContent: "center",
   },
   detailContainer: {
     flex: 2,
+    alignItems: "flex-start",
+    justifyContent: "center",
+    marginLeft: 20,
   },
   title: {
     fontFamily: "poppins-medium",
@@ -45,6 +52,16 @@ const styles = StyleSheet.create({
   },
   costContainer: {
     flex: 1,
+    alignItems: "center",
+    justifyContent: "center",
   },
-  cost: {},
+  cost: {
+    fontFamily: "poppins-medium",
+    fontSize: 16,
+  },
+  subtitle: {
+    fontFamily: "poppins-light",
+    fontSize: 10,
+    color: "#757575",
+  },
 });

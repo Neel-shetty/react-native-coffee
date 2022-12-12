@@ -18,6 +18,7 @@ export default function useCachedResources() {
           "space-mono": require("../../assets/fonts/SpaceMono-Regular.ttf"),
           "poppins-regular": require("../../assets/fonts/Poppins/Poppins-Regular.ttf"),
           "poppins-medium": require("../../assets/fonts/Poppins/Poppins-Medium.ttf"),
+          "poppins-light": require("../../assets/fonts/Poppins/Poppins-Light.ttf"),
           "poppins-semibold": require("../../assets/fonts/Poppins/Poppins-SemiBold.ttf"),
           "dmsans-medium": require("../../assets/fonts/DM_Sans/DMSans-Medium.ttf"),
         });
