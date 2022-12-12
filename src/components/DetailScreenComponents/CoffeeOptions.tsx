@@ -18,6 +18,14 @@ const CoffeeOptions = () => {
       </View>
       <View style={styles.item}>
         <Text style={styles.title}>Shot</Text>
+        <View style={styles.twoToggle}>
+          <View style={styles.toggle}>
+            <Text style={styles.title}>Single</Text>
+          </View>
+          <View style={styles.toggle}>
+            <Text style={styles.title}>Double</Text>
+          </View>
+        </View>
       </View>
       <View style={styles.item}>
         <Text style={styles.title}>Select</Text>
@@ -59,6 +67,9 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     alignItems: "center",
     justifyContent: "space-evenly",
+    flexDirection: "row",
+  },
+  twoToggle: {
     flexDirection: "row",
   },
 });
