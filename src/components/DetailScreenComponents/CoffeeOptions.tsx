@@ -57,7 +57,9 @@ const CoffeeOptions = () => {
 export default CoffeeOptions;
 
 const styles = StyleSheet.create({
-  root: {},
+  root: {
+  alignItems:'center'
+  },
   item: {
     height: 64,
     justifyContent: "space-between",
