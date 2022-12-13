@@ -31,4 +31,5 @@ const styles = StyleSheet.create({
     color: "#001833",
     marginLeft: 20,
   },
+  idk:{}
 });
