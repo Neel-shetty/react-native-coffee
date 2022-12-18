@@ -22,7 +22,7 @@ const Menu = () => {
       <View style={styles.titleContainer}>
         <Text style={styles.title}>Choose your coffee</Text>
       </View>
-      <View style={{ height: 390, width: width * 0.9, marginBottom: 50 }}>
+      <View style={{flex:5,alignItems:'center',justifyContent:"center" ,height: 390, width: width * 0.9, marginBottom: 50 }}>
         <FlatList
           data={menu}
           renderItem={({ item }) => {
@@ -61,6 +61,8 @@ const styles = StyleSheet.create({
     alignItems: "flex-start",
     width: width * 0.8,
     paddingBottom: 10,
+    flex:1,
+    justifyContent:"center",
   },
   title: {
     color: "#D8D8D8",
