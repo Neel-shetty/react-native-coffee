@@ -10,11 +10,11 @@ import PayNow from "./ConfirmOrder/PayNow";
 const ConfirmOrder = () => {
   return (
     <View style={styles.root}>
-      <View><Title/></View>
-      <View><Address/></View>
-      <View><PaymentMethods/></View>
-      <View><PriceDetails/></View>
-      <View><PayNow/></View>
+      <View style={styles.titleContainer}><Title/></View>
+      <View style={styles.addressContainer}><Address/></View>
+      <View style={styles.paymentContainer}><PaymentMethods/></View>
+      <View style={styles.priceContainer}><PriceDetails/></View>
+      <View style={payContainer}><PayNow/></View>
     </View>
   );
 };
@@ -29,5 +29,20 @@ const styles = StyleSheet.create({
     borderRadius: 40,
     alignItems: "center",
     justifyContent: "center",
+  },
+  titleContainer:{
+
+  },
+  addressContainer:{
+
+  },
+  paymentContainer:{
+
+  },
+  priceContainer:{
+
+  },
+  payContainer:{
+    
   },
 });
