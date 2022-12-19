@@ -43,6 +43,7 @@ import OrdersScreen from "../screens/MainScreens/OrdersScreen";
 import RewardScreen from "../screens/MainScreens/RewardScreen";
 import DetailScreen from "../screens/MainScreens/DetailScreen";
 import CartScreen from "../screens/MainScreens/CartScreen";
+import ConfirmOrderScreen from "../screens/MainScreens/ConfirmOrderScreen";
 
 export default function Navigation({
   colorScheme,
@@ -108,7 +109,16 @@ function RootNavigator() {
         component={DetailScreen}
         options={{ headerShown: false }}
       />
-      <Stack.Screen name="CartScreen" component={CartScreen}/>
+      <Stack.Screen
+        name="CartScreen"
+        component={CartScreen}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="ConfirmOrderScreen"
+        component={ConfirmOrderScreen}
+        options={{ headerShown: false }}
+      />
       <Stack.Group screenOptions={{ presentation: "modal" }}>
         <Stack.Screen name="Modal" component={ModalScreen} />
       </Stack.Group>

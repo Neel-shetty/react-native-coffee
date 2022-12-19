@@ -3,17 +3,27 @@ import React from "react";
 import CartCard from "../../components/CartScreenComponets/CartCard";
 import CartHeader from "../../components/CartScreenComponets/CartHeader";
 import CartBottom from "../../components/CartScreenComponets/CartBottom";
+import ConfirmOrder from "../../components/CartScreenComponets/ConfirmOrder";
 
 const CartScreen = ({ route }: any) => {
   console.log(route.params);
   return (
     <View style={styles.root}>
-      <Text>CartScreen</Text>
-      <CartHeader />
-      <Text style={styles.header}>My Cart</Text>
-      <CartCard info={route.params} />
-      <CartCard info={route.params} />
-      <CartBottom />
+      <View style={{ position: "absolute", bottom:0, zIndex:1 }}>
+        <ConfirmOrder />
+      </View>
+      <View style={styles.headerContainer}>
+        <CartHeader />
+      </View>
+      <View style={styles.titleContainer}>
+        <Text style={styles.header}>My Cart</Text>
+      </View>
+      <View style={styles.cardContainer}>
+        <CartCard info={route.params} />
+      </View>
+      <View style={styles.bottomContainer}>
+        <CartBottom />
+      </View>
     </View>
   );
 };
@@ -31,5 +41,23 @@ const styles = StyleSheet.create({
     color: "#001833",
     marginLeft: 20,
   },
-  idk:{}
+  idk: {},
+  headerContainer: {
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  titleContainer: {
+    flex: 1,
+    // alignItems:'center',
+    justifyContent: "center",
+  },
+  cardContainer: {
+    flex: 7,
+    alignItems: "center",
+    justifyContent: "flex-start",
+  },
+  bottomContainer: {
+    flex: 1,
+  },
 });
