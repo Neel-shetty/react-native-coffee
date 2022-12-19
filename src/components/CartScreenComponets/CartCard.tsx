@@ -2,14 +2,14 @@ import { StyleSheet, Text, View, Image } from "react-native";
 import React from "react";
 import { width } from "../../constants/Layout";
 
-const CartCard = ({ uri }: any) => {
+const CartCard = ({info}: any) => {
   return (
     <View style={styles.root}>
       <View style={styles.imageContainer}>
-        <Image source={uri} />
+        <Image source={info.uri} />
       </View>
       <View style={styles.detailContainer}>
-        <Text style={styles.title}>Americano</Text>
+        <Text style={styles.title}>{info.name}</Text>
         <Text style={styles.subtitle}>single | iced | medium | full ice</Text>
         <Text>x1</Text>
       </View>

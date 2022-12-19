@@ -16,7 +16,7 @@ const DetailScreen = ({
         <DetailHeader />
       </View>
       <View style={styles.imageContainer}>
-        <Image source={uri} />
+        <Image source={uri} style={{transform:[{scale:2}]}} />
       </View>
       <View style={styles.optionContainer}>
         <CoffeeOptions />

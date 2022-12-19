@@ -5,14 +5,14 @@ import CartHeader from "../../components/CartScreenComponets/CartHeader";
 import CartBottom from "../../components/CartScreenComponets/CartBottom";
 
 const CartScreen = ({ route }: any) => {
-  console.log(route.params.uri);
+  console.log(route.params);
   return (
     <View style={styles.root}>
       <Text>CartScreen</Text>
       <CartHeader />
       <Text style={styles.header}>My Cart</Text>
-      <CartCard uri={route.params.uri} />
-      <CartCard uri={route.params.uri} />
+      <CartCard info={route.params} />
+      <CartCard info={route.params} />
       <CartBottom />
     </View>
   );

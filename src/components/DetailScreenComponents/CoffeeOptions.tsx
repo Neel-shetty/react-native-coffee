@@ -84,6 +84,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "space-evenly",
     flexDirection: "row",
+    marginLeft:10
   },
   twoToggle: {
     flexDirection: "row",
