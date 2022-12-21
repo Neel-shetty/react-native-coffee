@@ -9,6 +9,9 @@ const CartScreen = ({ route }: any) => {
   console.log(route.params);
   return (
     <View style={styles.root}>
+      <View style={styles.confirmContainer}>
+        <ConfirmOrder/>
+      </View>
       <View style={styles.headerContainer}>
         <CartHeader />
       </View>
@@ -57,4 +60,8 @@ const styles = StyleSheet.create({
   bottomContainer: {
     flex: 1,
   },
+  confirmContainer:{
+    position:'absolute',
+    bottom:0
+      }
 });

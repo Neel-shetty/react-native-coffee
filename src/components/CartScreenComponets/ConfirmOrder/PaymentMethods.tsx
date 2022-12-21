@@ -11,4 +11,11 @@ const PaymentMethods = () => {
 
 export default PaymentMethods
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+  root:{
+    alignItems:'center',
+    justifyContent:'center',
+
+      }
+
+    })
