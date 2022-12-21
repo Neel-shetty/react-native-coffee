@@ -9,9 +9,6 @@ const CartScreen = ({ route }: any) => {
   console.log(route.params);
   return (
     <View style={styles.root}>
-      <View style={{ position: "absolute", bottom:0, zIndex:1 }}>
-        <ConfirmOrder />
-      </View>
       <View style={styles.headerContainer}>
         <CartHeader />
       </View>
