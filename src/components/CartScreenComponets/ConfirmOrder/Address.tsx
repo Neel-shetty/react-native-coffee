@@ -5,6 +5,12 @@ const Address = () => {
   return (
     <View>
       <Text>Address</Text>
+    <View>
+      <Text>Address</Text>
+    </View>
+    <View>
+      <Text>Address</Text>
+    </View>
     </View>
   )
 }

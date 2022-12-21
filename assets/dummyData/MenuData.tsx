@@ -35,4 +35,16 @@ export const menu = [
     image: require("../images/Home/coffee4.png"),
     cost: "$5",
   },
+  {
+    id: 7,
+    name: "Mocha",
+    image: require("../images/Home/coffee3.png"),
+    cost: "$5",
+  },
+  {
+    id: 8,
+    name: "Flat white",
+    image: require("../images/Home/coffee4.png"),
+    cost: "$5",
+  },
 ];

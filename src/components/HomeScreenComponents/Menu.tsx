@@ -23,9 +23,11 @@ const Menu = () => {
         <Text style={styles.title}>Choose your coffee</Text>
       </View>
       <View style={styles.list}>
+        <ScrollView horizontal>
         <FlatList
           data={menu}
           showsVerticalScrollIndicator={false}
+          numColumns={Math.ceil(menu.length/2)}
           renderItem={({ item }) => {
             function itemButton() {
               navigation.navigate("DetailScreen", { item: item });
@@ -38,8 +40,8 @@ const Menu = () => {
               </Pressable>
             );
           }}
-          numColumns={2}
         />
+        </ScrollView>
       </View>
       <View>{/* <TabBar /> */}</View>
     </View>
