@@ -1,6 +1,7 @@
 import { StyleSheet, Text, View } from "react-native";
 import React from "react";
 import { width } from "../../../constants/Layout";
+import { Ionicons } from "@expo/vector-icons";
 
 const PaymentMethods = () => {
   return (
@@ -14,6 +15,7 @@ const PaymentMethods = () => {
       </View>
       <View style={styles.logoContainer}>
         <Text>Logo</Text>
+        <Ionicons name="logo-amazon" size={24} />
       </View>
     </View>
   );
