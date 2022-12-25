@@ -9,9 +9,9 @@ const CartScreen = ({ route }: any) => {
   console.log(route.params);
   return (
     <View style={styles.root}>
-      <View style={styles.confirmContainer}>
+      {/* <View style={styles.confirmContainer}>
         <ConfirmOrder/>
-      </View>
+      </View> */}
       <View style={styles.headerContainer}>
         <CartHeader />
       </View>
