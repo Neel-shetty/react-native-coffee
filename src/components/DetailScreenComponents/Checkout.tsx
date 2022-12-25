@@ -7,7 +7,7 @@ const Checkout = ({ uri }: any) => {
   console.log(uri);
   const navigation = useNavigation();
   function cartButton() {
-    navigation.navigate("CartScreen", { uri: uri });
+    navigation.navigate("TrackOrderScreen", { uri: uri });
   }
   return (
     <View style={styles.root}>

@@ -4,9 +4,9 @@ import { width } from "../../constants/Layout";
 import { useNavigation } from "@react-navigation/native";
 
 const CartBottom = () => {
-  const navigation = useNavigation()
-  function checkoutButton(){
-    navigation.navigate('ConfirmOrderScreen')
+  const navigation = useNavigation();
+  function checkoutButton() {
+    navigation.navigate("OrderSuccessScreen");
   }
   return (
     <View style={styles.root}>

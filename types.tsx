@@ -27,7 +27,8 @@ export type RootStackParamList = {
   VerificationScreen: undefined;
   DetailScreen: undefined;
   CartScreen: undefined;
-  ConfirmOrderScreen: undefined;
+  OrderSuccessScreen: undefined;
+  TrackOrderScreen: undefined;
 };
 
 export type RootStackScreenProps<Screen extends keyof RootStackParamList> =
