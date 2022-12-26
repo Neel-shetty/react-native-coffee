@@ -34,7 +34,7 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   overlay: {
-    // position: "absolute",
+    position: "absolute",
     bottom: 0,
     height: 400,
     width: width,
