@@ -9,6 +9,7 @@ const TrackOrderScreen = () => {
     <View style={styles.root}>
       <View style={styles.overlay}>
         <Text>test</Text>
+        <Text>uggghh</Text>
       </View>
       <View style={styles.mapContainer}>
         <Map />
