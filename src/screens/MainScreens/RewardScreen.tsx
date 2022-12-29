@@ -3,8 +3,8 @@ import React from 'react'
 
 const RewardScreen = () => {
   return (
-    <View>
-      <Text>RewardScreen</Text>
+    <View style={styles.root}>
+      <Text style={styles.text}>RewardScreen</Text>
     </View>
   )
 }
