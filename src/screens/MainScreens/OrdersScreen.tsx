@@ -11,4 +11,11 @@ const OrdersScreen = () => {
 
 export default OrdersScreen
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+  root:{
+
+  },
+  title:{
+    
+  }
+})
