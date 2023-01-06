@@ -2,6 +2,7 @@ import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 
 const OrdersScreen = () => {
+  //time to move on to next project
   return (
     <View>
       <Text>OrdersScreen</Text>
